@@ -18,8 +18,8 @@ var templates = {
 
 // ASSETS
 assets = {
-	sent_audio : new Audio("/client/sent.ogg"),
-	recieved_audio : new Audio("/client/ding.ogg")
+	sent_audio : new Audio("/chat/sounds/sent.ogg"),
+	recieved_audio : new Audio("/chat/sounds/ding.ogg")
 };
 //
 
