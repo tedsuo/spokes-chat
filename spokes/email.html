@@ -1,0 +1,163 @@
+<html>
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+		<title>Templator</title>
+
+			<!-- load say dependencies -->
+<!--		<script src="/say/lib/Socket.IO/socket.io.js" type="text/javascript"></script>-->
+		<script src="/say/lib/jquery.js"	type="text/javascript"></script>
+		<link  href="/say/lib/jquery-ui/jquery-ui.css" rel="stylesheet" type="text/css"/>
+		<script src="/say/lib/jquery-ui/jquery-ui.js"	type="text/javascript"></script>
+		<script src="/say/lib/jquery-ui/jquery.ui.resizable.js"	type="text/javascript"></script>
+		<script src="/say/lib/sammy/lib/sammy.js" type="text/javascript"></script>
+		<script src="/say/lib/mustache.js" type="text/javascript"></script>
+		<script src="/say/lib/active-record.js" type="text/javascript"></script>
+		<script src="/say/lib/ckeditor/ckeditor.js" type="text/javascript"></script>
+		<script src="/say/lib/ckeditor/adapters/jquery.js" type="text/javascript"></script>
+		<script src="/say/lib/dia.js" type="text/javascript"></script>
+		<!-- load say -->
+		<script src="/say/say.js" type="text/javascript"></script>
+
+		<!-- loat email-demo -->
+		<link  href="/spokes/email-demo/styles.css" rel="stylesheet" type="text/css"/>													
+    <script type="text/javascript" src="/spokes/email-demo/boot.js"></script>
+    <script type="text/javascript" src="/spokes/email-demo/views.js"></script>
+    <script type="text/javascript" src="/spokes/email-demo/models.js"></script>		
+    <script type="text/javascript" src="/spokes/email-demo/controllers.js"></script>
+  </head>
+  <body style="padding: 0, margin: 0">
+
+ 
+    <table id="templator" cellpadding="0" cellspacing="0">
+	
+		<tr id="header-container" height="24">
+			<td id="header" colspan="2">
+
+<!--				
+				<div id="db-status-ready-container" class="db-status-container">
+					<div id="db-status-ready" class="db-status">
+					</div>
+				</div>
+
+				<div id="db-status-loading-container" class="db-status-container">
+					<div id="db-status-loading" class="db-status">
+					</div>
+				</div>
+-->
+				<div id="logo-container">
+					<div id="logo">
+						Templator
+					</div>
+				</div>
+				
+				<div id="top-menu-container">
+					<div id="top-menu">
+					
+					</div>
+				</div>
+				
+				<div id="title-container">
+					<div id="title">
+						Email Demo
+					</div>
+				</div>				
+
+			</td>
+		</tr>
+		
+		
+		<tr id="main-container">
+
+				<td id="sidebar-container">
+					<div id="sidebar">
+
+						<h3 id="status-header">
+								<span class="ui-icon ui-icon-star"></span>
+								Status
+						</h3>
+											
+						<div id="status-list-container">
+							<div id="status-list">
+							</div>
+						</div>
+
+						<h3 id="folder-header">
+								<span class="ui-icon ui-icon-folder-collapsed"></span>
+								Folders
+						</h3>
+						
+						<div id="folder-list-container">
+							<div id="folder-list">
+
+							</div>
+						</div>
+
+						<div id="sidebar-resize-handle-container" class="ui-resizable-handle ui-resizable-e">
+							<div id="sidebar-resize-handle">
+							</div>
+						</div>
+		
+					</div>
+				</td>
+				
+				<td id="center-container">
+					<div id="center">
+		
+						<div id="email-list-container">
+							<div id="email-list-resizer">
+
+								<div id="email-list">
+								</div>
+
+								<div id="email-list-resize-handle-container" class="ui-resizable-handle ui-resizable-s">
+									<div id="email-list-resize-handle">
+									</div>
+								</div>
+
+							</div>
+						</div>
+		
+						<div id="email-container">
+							<div id="email">
+		
+								<div id="email-controls-container">
+									<div id="email-controls">
+									</div>
+								</div>
+		
+								<div id="email-form-generator-container">
+									<div id="email-form-generator">
+		
+										<div id="toolbox-container">
+											<div id="toolbox">
+											</div>
+										</div>
+		
+									</div>
+								</div>
+		
+							</div>
+						</div>
+
+		
+					</div>
+				</td>
+
+			</tr>
+			
+			<tr id="footer-container" height="12">
+				<td id="footer" colspan="2">
+	
+					<div id="rd-logo-container">
+						<div id="rd-logo">
+							radicalDESIGNS
+						</div>
+					</div>
+					
+				</td>
+			</tr>
+			
+		</table>
+	</body>
+</html>
