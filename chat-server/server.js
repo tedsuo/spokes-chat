@@ -10,7 +10,7 @@ chat_server.listen(8080);
 
 io.listen( chat_server,{
 
-	onClientMessage : function(message,client){
+	onClientMessage : function( message, client){
 		sys.puts('MESSAGE RECIEVED: '+message);
 		client.broadcast( message );
 	}
