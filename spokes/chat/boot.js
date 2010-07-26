@@ -8,6 +8,11 @@ chat.db.create({
 		adapter: 'websocket'
 });
 
+chat.config.targets = {
+	user_list: '#chat-user-list-window',
+	chat_window: '#chat-window',
+	chat_controls: '#chat-controls-window'
+};
 
 chat.config.defaults = {
 	handle_color: 'DarkRed',

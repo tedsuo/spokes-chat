@@ -41,7 +41,7 @@ chat.view.define({
 	
 	ChatMessage : function(message){
 		var html = Mustache.to_html( chat.template.ChatMessage, message);
-		$('#chat-window')
+		$( chat.config.targets.chat_window )
 		.append( html )
 		.scrollTop(1000000);
 		
@@ -53,7 +53,7 @@ chat.view.define({
 			
 			$(html)
 			.data('user_id', user_data.id)
-			.appendTo('#user-list-window');
+			.appendTo( chat.config.targets.user_list );
 		},
 		update : function(user_data){
 			var html = Mustache.to_html(chat.template.UserListItem, user_data);
@@ -108,7 +108,7 @@ chat.view.define({
 	ChatControls : function(user_data){
 		var html = chat.template.ChatControls;
 
-		$('#chat-controls-window')
+		$(chat.config.targets.chat_controls)
 		.empty()
 		.append(html);
 		
@@ -133,6 +133,6 @@ chat.view.define({
 			chat.event.trigger('create_chat_message', $('#message').val());
    		$('#message').val('');   	
    	}		
-	},
+	}
 
 });
