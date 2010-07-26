@@ -3,9 +3,10 @@
  *
  *  description: say.js is the javascript MVC for Spokes
  *	
- *	global footprint: function new_spokes_application is the only global namespace required by say.js
- *	however, a number of open source libraries and dependencies can be found in lib/, which must be
- *	loaded before this script in order to be used.
+ *	global footprint: new_spokes_application() is the only global namespace 
+ *	required by say.js however, a number of open source libraries and 
+ *	dependencies can be found in lib/, which must be loaded before this script
+ *	in order to be used.
  *
  *	REQUIRED LIBRARIES
  *	Sammy
@@ -17,11 +18,13 @@
  *	Mustache.js
  *	CKeditor
  *
- *	One of the ultimate goals of say.js is to be a small, consise interface, with a number of adapters 
- *	to allow integration with a variety of open source models, controllers, and view helpers.  However, 
- *  at this point in development only Sammy controllers and ActiveRecord.js models are supported. Views
- *  are more flexible, and additional view libraries and jquery plugins can easily be integrated, by
- *  requiring the library and adding view helper functions to the say.view namespace. 
+ *	One of the ultimate goals of say.js is to be a small, consise interface, 
+ *	with a number of adapters to allow integration with a variety of open source 
+ *	models, controllers, and view helpers.  However, at this point in development
+ *	only Sammy controllers and ActiveRecord.js models are supported. Views are 
+ *	more flexible, and additional view libraries and jquery plugins can easily be
+ *	integrated, by requiring the library and adding view helper functions to the 
+ *	say.view namespace. 
  */
 
 // new_spokes_application is the primary way to create a new spokes application.
