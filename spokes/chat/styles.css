@@ -83,7 +83,7 @@ left: 0;
 #options-btn{
 text-decoration:none;
 }
-#user-list-box{
+#chat-user-list-box{
 float: right;
 width: 30%;
 margin-right: 10px;
@@ -92,7 +92,7 @@ background: black;
 color: white;
 padding: 2px 8px;
 }
-#user-list-box h3{
+#chat-user-list-box h3{
 margin: 0;
 padding: 0;
 }

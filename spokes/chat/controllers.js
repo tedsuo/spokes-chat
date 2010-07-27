@@ -1,25 +1,15 @@
-// CONTROLLERS
-
 chat.controller.define( {
 	
 	name : 'Application',
 	
-	before_filters : {
-		start_chatroom : function(){
-			if( !chat.config.chat_started ){
-				chat.view.LoginWindow();
-				chat.config.chat_started = true;
-			}
-		}
-	},
-	
 	routes : {
 	
-		index : {
+		start_chatroom : {
 			method : 'get',
 			target : '',
 			action : function(){
-
+				chat.view.LoginWindow();
+				chat.config.chat_started = true;
 			}
 		},
 		

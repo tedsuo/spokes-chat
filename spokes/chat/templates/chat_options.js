@@ -1,26 +1,4 @@
-// MUSTACHE.JS TEMPLATES
-chat.template = {
-	LoginWindow : '\
-		<div id="overlay"></div>																				 	\
-		<div id="floating-window" style="display:none">										\
-				<label for="set-user-name">Choose your handle</label>				 	\
-				<input id="set-user-name" name="set-user-name" type="text" />	\
-				<button id="set-user-name-btn">Go</button>									 	\
-		</div>																													 	\
-	',
-	ChatControls : '\
-		<div id="chat-controls">																								\
-			<h2>																																	\
-				<a id="options-btn" name="options-btn" href="#options">Options</a>	\
-			</h2>																																	\
-			<div class="clear"></div>																							\
-			<label for="message">Message</label>																	\
-			<textarea id="message" name="message"></textarea>											\
-			<div class="clear"></div>																							\
-			<button id="send-message" name="send-message">Send</button>						\
-		</div>																																	\
-	',
-	ChatOptions :'\
+chat.template.ChatOptions = '\
 		<div id="overlay" style="display:none"></div>														\
 		<div id="floating-window" style="display:none">													\
 			<div id="chat-options">																								\
@@ -59,16 +37,4 @@ chat.template = {
 				</form>																															\
 			</div>																																\
 		</div>																																	\
-	',
-	ChatMessage : '\
-		<div class="message-block">\
-			<span class="user-name" style="color:{{handle_color}};font-family:{{font}};">{{name}}: </span>\
-			<span class="message" style="color:{{text_color}};font-family:{{font}};">{{message}}</span>\
-		</div>\
-	',
-	UserListItem : '\
-		<div class="user-list-item" id="user-list-item-{{id}}">\
-			<span class="user-name">{{name}}</span>\
-		</div>\
-	'
-};
+';

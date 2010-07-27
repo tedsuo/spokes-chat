@@ -31,7 +31,7 @@ eml.controller.define( {
 
 				// connect to the db to load initial data,
 				// block proccessing until data is returned
-				eml.db.connect({async:false});
+				eml.db.send({async:false});
 
 				// set flag to true so page doesn't load twice
 				eml.config['page_initialized'] = true;		

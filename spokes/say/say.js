@@ -543,6 +543,6 @@ say.config = {
 };
 
 say.cache = {};
-
+say.template = {};
 return say;
 };
