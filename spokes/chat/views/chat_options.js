@@ -29,7 +29,8 @@ chat.view.define({
 			});
 			$('#floating-window').fadeOut(300,function(){
 				$(this).remove();
-			});			
+			});
+			$('.chatroom #message').focus();
 		});
 
 	}

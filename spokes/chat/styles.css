@@ -2,74 +2,102 @@ body{
 margin: 0;
 padding: 0;
 }
-.clear{
+.chatroom .clear{
 clear: both;
 }
-.blue{
+.chatroom .blue{
 color: navy;
 }
-.red{
+.chatroom .red{
 color: fuchsia;
 }
 #chatroom{
-margin-left: 10px;
+margin-left:10px;
+position:absolute;
+right:10px;
+top:6px;
+width:200px;
+z-index: 200;
+height: 56%;
 }
 #chat-window{
-border: 1px solid #000000;
-width: 60%;
-height: 56%;
-overflow-x: hidden;
-overflow-y: scroll;
-float: left;
-
+border: none;
+border-left:1px solid #999999;
+height:99%;
+overflow-x:hidden;
+overflow-y:scroll;
 }
-.user-name{
+.chatroom .user-name{
 font-weight: bold;
 }
 #chat-controls-window{
-width: 314px;
+border:1px solid #999999;
+padding:4px 10px;
 }
-#input label{
+.chatroom h3{
+color:#333333;
+font-family:lucida Grande;
+font-size:12px;
+font-variant:small-caps;
+margin:2px 0 4px;
+}
+#floating-window .chatroom h3{
+color: white;
+margin-bottom:12px;
+}
+.chatroom label{
 width: 60px;
 display: block;
 float: left;
 }
-#input #user-options label{
+#floating-window #chat-options label{
 width: 100px;
 display: block;
 float: left;
 }
-#input input{
+.chatroom  input{
 display: block;
 float: left;
 margin-bottom: 10px;
 }
-#input select{
+.chatroom select{
 display: block;
 float: left;
 margin-bottom: 10px;
 }
-#input textarea{
-width: 250px;
+.chatroom textarea{
 height: 60px;
 display: block;
 float: left;
 margin-bottom: 10px;
+width:178px;
 }
-#input button{
-display: block;
-float: right;
-margin-bottom: 10px;
+.chatroom button{
+border:1px solid #999999;
+cursor:pointer;
+margin-bottom:10px;
+clear: both;
+display:block;
+float:right;
+}
+#chat-controls button{
+}
+#floating-window .chatroom label {
+display:block;
+float:left;
+margin-right:8px;
+width: auto;
 }
 #floating-window{
 background:none repeat scroll 0 0 black;
 border:1px solid grey;
 color:white;
-left:20%;
+right:33%;
 opacity:0.9;
 padding:20px;
 position:absolute;
 top:20%;
+z-index: 1001;
 }
 #overlay{
 position: absolute;
@@ -79,20 +107,26 @@ opacity: .6;
 background: black;
 top: 0;
 left: 0;
+z-index: 1000;
 }
-#options-btn{
+.chatroom #options-btn{
 text-decoration:none;
+color: #333333;
 }
 #chat-user-list-box{
-float: right;
-width: 30%;
-margin-right: 10px;
-border: 1px gray solid;
-background: black;
-color: white;
-padding: 2px 8px;
+background:none repeat scroll 0 0 black;
+color:white;
+padding:2px 8px 4px;
+height: 28%;
+overflow-y: auto;
 }
 #chat-user-list-box h3{
-margin: 0;
-padding: 0;
+color:#DDDDDD;
+font-size:11px;
+margin:0;
+padding:0;
+text-decoration:underline;
+}
+.chatroom .message-block{
+padding: 0 2px;
 }
