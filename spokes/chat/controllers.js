@@ -2,14 +2,24 @@ chat.controller.define( {
 	
 	name : 'Application',
 	
+	before_filters: {
+		start_chatroom : function(){
+				if ( !chat.config.chatroom_initialized ){
+					chat.view.LoginWindow();
+					chat.event.trigger('close_chat_window');
+					chat.config.chat_started = true;
+					chat.config.chatroom_initialized = true;
+				}
+			},
+	},
+	
 	routes : {
 	
-		start_chatroom : {
+		index : {
 			method : 'get',
 			target : '',
 			action : function(){
-				chat.view.LoginWindow();
-				chat.config.chat_started = true;
+// stub to get Sammy to work?
 			}
 		},
 		
@@ -77,7 +87,7 @@ chat.controller.define( {
 		},
 		
 		create_chat_message : function( e, message_text ){
-				var user = chat.model.User.find(chat.config.current_user_id);
+				var user = chat.model.User.find( chat.config.current_user_id );
 
 				var chat_message = {
 					message: message_text,
@@ -88,8 +98,11 @@ chat.controller.define( {
 					font: user.font
 				};
 						
-				chat.view.ChatMessage(chat_message);
-				chat.db.send({ event: 'new_message', data: chat_message});
+				chat.view.ChatMessage( chat_message );
+				chat.db.send({ 
+					event: 'new_message', 
+					data: chat_message 
+				});
 		    chat.assets.sounds.SentChat.play();
 		},
 
@@ -112,8 +125,16 @@ chat.controller.define( {
 		edit_chat_options : function(){
 				var user = chat.model.User.find(chat.config.current_user_id);
 				chat.view.ChatOptions(user.toObject());		
-		}
+		},
 		
+		close_chat_window : function(){
+			$('#chatroom').fadeOut(300);
+
+		},
+		
+		open_chat_window : function(){
+			$('#chatroom').fadeIn(300);
+		}	
 	},
 	
 	server_events : {
@@ -135,7 +156,7 @@ chat.controller.define( {
 		
 		user_disconnected : function( e, msg){
 			chat.event.trigger('destroy_user',msg);
-		}
+		}		
 		
 	}
 

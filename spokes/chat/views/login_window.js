@@ -20,10 +20,14 @@ chat.view.define({
 			login();
 		});		
 		
-		// close form and create new user,
+		// function: login()
+		// close form, open chat window, and create a new user
 		function login(){
   		var user_name = $('#set-user-name').val();
 			chat.event.trigger('create_current_user', user_name);
+			chat.event.trigger('open_chat_window');
+			
+
 			// hide floaty dialog box
 			$('#overlay').fadeOut(600,function(){
 				$(this).remove();
@@ -31,6 +35,7 @@ chat.view.define({
 			$('#floating-window').fadeOut(300,function(){
 				$(this).remove();
 			});
+
 			// user focus on the message box, chat away!
 			$('#message').focus();
 		}	

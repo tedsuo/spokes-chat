@@ -26,6 +26,7 @@ border-left:1px solid #999999;
 height:99%;
 overflow-x:hidden;
 overflow-y:scroll;
+background: white;
 }
 .chatroom .user-name{
 font-weight: bold;

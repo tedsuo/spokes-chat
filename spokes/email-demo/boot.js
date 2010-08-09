@@ -16,6 +16,6 @@ var eml = new_spokes_application();
 // call it in your before_filters to seed data into your 
 // templates.
 eml.db.create({
-	host: 'http://localhost/spokes/email-demo/example_data.json',
+	host: 'http://10.0.1.191/spokes/email-demo/example_data_2.json',
 	adapter: 'ajax'
 });
