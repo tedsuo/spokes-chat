@@ -1,6 +1,4 @@
 var http = require('http'), 
-		url = require('url'),
-		fs = require('fs'),
 		io = require('./lib/Socket.IO-node/lib/socket.io'),
 		sys = require('sys'),
 
